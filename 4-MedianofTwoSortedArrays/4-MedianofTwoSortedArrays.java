@@ -1,5 +1,5 @@
 class Solution {
-    // Test
+    // Nouvelle version
     private int p1 = 0, p2 = 0;
 
     private int getMin(int[] nums1, int[] nums2) {
