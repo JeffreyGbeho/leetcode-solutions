@@ -9,7 +9,7 @@ class Solution {
                 return res;
             }
 
-            map.put(nums[i], i);
+            map.put(nums[i], i) ;
         }
 
         return null;
