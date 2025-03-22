@@ -1,4 +1,4 @@
-# Last updated: 22/03/2025 21:46:29
+# Last updated: 22/03/2025 21:46:53
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         n = len(nums)
