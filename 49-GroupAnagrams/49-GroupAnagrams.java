@@ -1,4 +1,4 @@
-// Last updated: 06/12/2025 14:17:31
+// Last updated: 06/12/2025 14:17:52
 1class Solution {
 2    public List<List<String>> groupAnagrams(String[] strs) {
 3        List<List<String>> res = new ArrayList<>();
@@ -33,22 +33,15 @@
 32                    }
 33                }
 34
-35                // boolean test = true;
-36                // for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-37                //     if (!an.containsKey(entry.getKey()) || !(an.get(entry.getKey()).equals(entry.getValue()))) {
-38                //         test = false;
-39                //     }
-40                // }
-41
-42                if (test && map.size() == 0) {
-43                    r.add(strs[j]);
-44                    strs[j] = null;
-45                }
-46            }
-47
-48            res.add(r);
-49        }
-50
-51        return res;
-52    }
-53}
+35                if (test && map.size() == 0) {
+36                    r.add(strs[j]);
+37                    strs[j] = null;
+38                }
+39            }
+40
+41            res.add(r);
+42        }
+43
+44        return res;
+45    }
+46}
