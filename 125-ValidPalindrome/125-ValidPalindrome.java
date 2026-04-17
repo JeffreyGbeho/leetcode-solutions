@@ -1,14 +1,14 @@
-// Last updated: 17/04/2026, 15:09:06
+// Last updated: 17/04/2026, 15:12:00
 1class Solution {
 2    public boolean isPalindrome(String s) {
 3        int i = 0;
 4        int j = s.length() - 1;
 5
 6        while (i < j) {
-7            while (i < s.length() && (!Character.isAlphabetic(s.charAt(i)) && !Character.isDigit(s.charAt(i)))) {
+7            while (i < s.length() && !Character.isLetterOrDigit(s.charAt(i))) {
 8                i++;
 9            }
-10            while (j >= 0 && (!Character.isAlphabetic(s.charAt(j)) && !Character.isDigit(s.charAt(j)))) {
+10            while (j >= 0 && !Character.isLetterOrDigit(s.charAt(j))) {
 11                j--;
 12            }
 13
