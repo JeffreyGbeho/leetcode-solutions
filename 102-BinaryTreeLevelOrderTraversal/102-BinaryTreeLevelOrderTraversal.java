@@ -1,4 +1,4 @@
-// Last updated: 23/04/2026, 14:32:33
+// Last updated: 23/04/2026, 14:34:26
 1/**
 2 * Definition for a binary tree node.
 3 * public class TreeNode {
@@ -24,24 +24,23 @@
 23
 24        while (!queue.isEmpty()) {
 25            List<Integer> curr = new ArrayList<>();
-26            Deque<TreeNode> child = new ArrayDeque<>();
+26            int size = queue.size();
 27
-28            while (!queue.isEmpty()) {
+28            for (int i = 0; i < size; i++) {
 29                TreeNode node = queue.getFirst();
 30                queue.removeFirst();
 31                curr.add(node.val);
 32                if (node.left != null) {
-33                    child.addLast(node.left);
+33                    queue.addLast(node.left);
 34                }
 35                if (node.right != null) {
-36                    child.addLast(node.right);
+36                    queue.addLast(node.right);
 37                }
 38            }
 39
 40            res.add(curr);
-41            queue = child;
-42        }
-43
-44        return res;
-45    }
-46}
+41        }
+42
+43        return res;
+44    }
+45}
