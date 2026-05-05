@@ -1,17 +1,15 @@
-// Last updated: 03/10/2025 19:43:56
-class Solution {
-    public int removeElement(int[] nums, int val) {
-        int i = 0;
-        int n = nums.length;
-        while (i < n) {
-            if (nums[i] == val) {
-                nums[i] = nums[n - 1];
-                // reduce array size by one
-                n--;
-            } else {
-                i++;
-            }
-        }
-        return n;
-    }
-}
+// Last updated: 05/05/2026, 14:05:28
+1class Solution {
+2    public int removeElement(int[] nums, int val) {
+3        int k = 0;
+4        
+5        for (int i = 0; i < nums.length; i++) {
+6            if (nums[i] != val) {
+7                nums[k] = nums[i];
+8                k++;
+9            }
+10        }
+11
+12        return k;
+13    }
+14}
