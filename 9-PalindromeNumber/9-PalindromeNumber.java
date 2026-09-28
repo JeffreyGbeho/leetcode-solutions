@@ -1,19 +1,18 @@
-// Last updated: 03/10/2025 19:44:12
-class Solution {
-    public boolean isPalindrome(int x) {
-        if (x < 0) {
-            return false;
-        }
-
-        long reversed = 0;
-        long temp = x;
-
-        while (temp != 0) {
-            int digit = (int) (temp % 10);
-            reversed = reversed * 10 + digit;
-            temp /= 10;
-        }
-
-        return (reversed == x);
-    }
-}
+// Last updated: 27/09/2026, 20:25:24
+1class Solution {
+2    public boolean isPalindrome(int x) {
+3        if (x < 0) {
+4            return false;
+5        }
+6
+7        int reverse = 0;
+8        int xcopy = x;
+9
+10        while (x > 0) {
+11            reverse = (reverse * 10) + (x % 10);
+12            x /= 10;
+13        }
+14
+15        return reverse == xcopy;        
+16    }
+17}
